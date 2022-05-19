@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="common/css/reveal.css">
+  <link rel="stylesheet" href="common/css/white.css">
+  <link rel="stylesheet" href="common/css/overrides.css">
+  <script src="common/java/print.js"></script>
+  <title>GDSC - Geospatial Data Special Collections</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+    
+      <!-- ***
+            * Title Slide Branded
+            * -->
+      <!-- <section data-autoslide="10000" data-transition="fade" data-background-image="common/assets/img/titlePage.png">
+        <div style="position: absolute; top: 0px; left: 0px;">
+          <div style="color: white; margin-top: 0px; text-align: left; margin-left: 340px; margin-bottom: 23px;"  ><strong><br>&nbsp;<br>Geospatial Data Special Collections<br>&nbsp;GDSC</strong><br><br></div>
+          <div style="color: black; margin-top: 23px; margin-left: 330px; text-align: left; font-size: 0.8em"><strong>Institute for Data Science and Computing</strong><br><strong>University of Miami Libraries</strong></div>
+          <div style="color: white; margin-left: 340px; margin-top: 125px; font-size: 60%;">
+            <div style="text-align: left; float: left;">2022-05-19 Smart Cities Miami Conference and Symposium<br>Timothy B Norris <a href="mailto:tnorris@miami.edu" style="color: #fff; text-decoration: underline;">tnorris@miami.edu</a>&nbsp;|&nbspChris Mader <a href="mailto:cmader@med.miami.edu" style="color: #fff; text-decoration: underline;">cmader@med.miami.edu</a></div>
+            <div style="text-align: right; float: right; margin-left: 70px;"></div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- **********************************************************************************
+            * Outline
+            * -->
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;"><span style="font-size: 3em !important">GDSC</span><br>&nbsp;&nbsp;<br>Geospatial Data Special Collections</div>
+          <div style="margin-top: 42px; margin-bottom: 100px; font-size: 90%; margin-left: 23px; font-style: italic; width: 65%">
+            GDSC will <strong>facilitate interdisciplinary research</strong> by<br>streamlining data acquisition, metadata and data harmonization,<br>and format transformations necessary to use <strong>geospatial data</strong><br>in the formulation and investigation of research<br>questions with a geographical component.
+          </div>
+          <div><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 513px;"></div>
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_below_poverty.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          As a key component in efforts to build smart cities, geospatial datasets inform and support basic research, decision making, urban planning and analytics, the production of maps, and other forms of geovisualization.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_owner_occupied.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          These activities are based on widely available sources of geospatial data that span scales from global to local, such as Google Earth, OpenStreetMap (OSM), the Census Bureau’s American Community Survey (ACS), the Miami-Dade open data portal, and so on.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_year_built.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          Geospatial datasets are also increasingly produced as the result of academic research and other planning activities.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_owner_burdened.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          But discovery, access, and re-use of relevant data can be challenging and time-consuming. Researchers must locate and acquire data sets from varied institutions, understand metadata and analytical limitations, and harmonize disparate file formats and geographies.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_renter_burdened.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          Such data curation requires analytical skill and often duplicates tasks that slow scientific discovery. 
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/storm_surge.jpg">
+        <div style="position: absolute; z-index: 10; top: -340px; left: 20px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          As a solution to this difficulty, GDSC is a joint initiative between the Institute for Data Science and Computing (IDSC) and the University of Miami Libraries to make geographic data at the University of Miami more discoverable, accessible, and interoperable.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/sea_level_rise.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 60px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          To do this GDSC provides a non-proprietary platform to dynamically discover, publish, and/or consume geographic data as a service.
+        </div>
+        <div style="position: absolute; top: 550px; font-size:0.4em; background-color: #fff; padding: 7px 13px; border-radius: 4px">100 year sea level rise</div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/surface_temperature.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 180px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          The data made available through GDSC will be a highly curated set of collections--or special collections--of geographic data with coverage in south Florida and the Global South of the western hemisphere.
+        </div>
+        <div style="position: absolute; top: 550px; font-size:0.4em; background-color: #fff; padding: 7px 13px; border-radius: 4px">Surface Temperature 2011-2018</div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees1.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 120px; text-align: left; width: 60%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.7); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; font-weight: 800">
+          <p>We invite your contributions to GDSC:</p>
+          <ul style="font-size: 0.95em">
+            <li>Suggest datasets of interest to be included in GDSC</li>
+            <li>Submit your geographic data for publication in GDSC</li>
+            <li>Participate on the GDSC governance board </li>
+          </ul>
+          <p>If you have questions, please contact <a href="mailto:tnorris@miami.edu" style="color: #fff;">tnorris@miami.edu</a>.</p>
+        </div>
+        <div style="background-color: rgba(255,255,255,0.8); margin-top: 550px; width: 90%"><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 42px;"></div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees2.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 120px; text-align: left; width: 60%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.7); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; font-weight: 800">
+          <p>We invite your contributions to GDSC:</p>
+          <ul style="font-size: 0.95em">
+            <li>Suggest datasets of interest to be included in GDSC</li>
+            <li>Submit your geographic data for publication in GDSC</li>
+            <li>Participate on the GDSC governance board </li>
+          </ul>
+          <p>If you have questions, please contact <a href="mailto:tnorris@miami.edu" style="color: #fff;">tnorris@miami.edu</a>.</p>
+        </div>
+        <div style="background-color: rgba(255,255,255,0.8); margin-top: 550px; width: 90%"><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 42px;"></div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees3.jpg">
+        <div style="z-index: 10; text-align: left; width: 90%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.85); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; display:inline-block; line-height: 1.2em">
+          <div style="width: 32%; float: left;">
+            <p style="font-size: 1.3em;"><strong>GDSC Data</strong></p>
+            <ul style="font-size: 0.8em">
+              <li>ACS Race and Ethnic Origin</li> 
+              <li>ACS Income and Poverty Status</li> 
+              <li>ACS Housing Units Occupancy and Costs</li> 
+              <li>ACS Educational Attainment</li> 
+              <li>ACS Health Insurance</li> 
+              <li>ACS Spoken Languages</li> 
+              <li>HOLC Redlining Grades</li> 
+              <li>RER Qualified Opportunity Zones</li> 
+              <li>Municipal Zoning</li> 
+              <li>EIA Energy Sources</li> 
+              <li>CDC Social Vulnerability Index</li> 
+              <li>Historical Hurricane Tracks</li> 
+            </ul>
+          </div>
+          <div style="width: 28%; float: left; margin-top: 42px; margin-left: 42px">
+            <ul style="font-size: 0.8em">
+              <li>Storm Surge Models</li> 
+              <li>Urban Heat Islands</li>
+              <li>EPA Environmental Hazards</li> 
+              <li>EPA Air Quality Index</li> 
+              <li>MDC Lidar Elevation</li> 
+              <li>MDC Public Services</li> 
+              <li>MDC Public Transportation</li> 
+              <li>MDC parcel data</li> 
+              <li>WAZE historical traffic data</li> 
+              <li>Section 8 data</li> 
+              <li>Historic Properties</li> 
+              <li>Municipal zoning</li> 
+              <li>Political districts</li> 
+              <li>FEMA flood zones </li>
+            </ul>
+          </div>
+          <div style="width: 32%; float: left; margin-left: 23px;">
+            <span style="margin-top: 7px; margin-bottom: 13px; display: inline-block;">University of Miami Data</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Building footprints</li> 
+              <li>UM Building interiors</li> 
+              <li>UM Emergency infrastructure</li> 
+              <li>UM Green buildings</li> 
+              <li>UM Tree inventory</li> 
+              <li>UM Parking and Transportation</li>
+            </ul>
+            <span style="margin-top: 13px; margin-bottom: 13px; display: inline-block;">IDSC Drone Surveys</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Coral Gables Campus</li> 
+              <li>Selected MDC parks</li> 
+              <li>Selected MDC historic buildings</li> 
+              <li>Selected MDC neighborhoods</li> 
+              <li>Selected sites in Latin America and the Caribbean</li> 
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees4.jpg">
+        <div style="z-index: 10; text-align: left; width: 90%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.85); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; display:inline-block; line-height: 1.2em">
+          <div style="width: 32%; float: left;">
+            <p style="font-size: 1.3em;"><strong>GDSC Data</strong></p>
+            <ul style="font-size: 0.8em">
+              <li>ACS Race and Ethnic Origin</li> 
+              <li>ACS Income and Poverty Status</li> 
+              <li>ACS Housing Units Occupancy and Costs</li> 
+              <li>ACS Educational Attainment</li> 
+              <li>ACS Health Insurance</li> 
+              <li>ACS Spoken Languages</li> 
+              <li>HOLC Redlining Grades</li> 
+              <li>RER Qualified Opportunity Zones</li> 
+              <li>Municipal Zoning</li> 
+              <li>EIA Energy Sources</li> 
+              <li>CDC Social Vulnerability Index</li> 
+              <li>Historical Hurricane Tracks</li> 
+            </ul>
+          </div>
+          <div style="width: 28%; float: left; margin-top: 42px; margin-left: 42px">
+            <ul style="font-size: 0.8em">
+              <li>Storm Surge Models</li> 
+              <li>Urban Heat Islands</li>
+              <li>EPA Environmental Hazards</li> 
+              <li>EPA Air Quality Index</li> 
+              <li>MDC Lidar Elevation</li> 
+              <li>MDC Public Services</li> 
+              <li>MDC Public Transportation</li> 
+              <li>MDC parcel data</li> 
+              <li>WAZE historical traffic data</li> 
+              <li>Section 8 data</li> 
+              <li>Historic Properties</li> 
+              <li>Municipal zoning</li> 
+              <li>Political districts</li> 
+              <li>FEMA flood zones </li>
+            </ul>
+          </div>
+          <div style="width: 32%; float: left; margin-left: 23px;">
+            <span style="margin-top: 7px; margin-bottom: 13px; display: inline-block;">University of Miami Data</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Building footprints</li> 
+              <li>UM Building interiors</li> 
+              <li>UM Emergency infrastructure</li> 
+              <li>UM Green buildings</li> 
+              <li>UM Tree inventory</li> 
+              <li>UM Parking and Transportation</li>
+            </ul>
+            <span style="margin-top: 13px; margin-bottom: 13px; display: inline-block;">IDSC Drone Surveys</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Coral Gables Campus</li> 
+              <li>Selected MDC parks</li> 
+              <li>Selected MDC historic buildings</li> 
+              <li>Selected MDC neighborhoods</li> 
+              <li>Selected sites in Latin America and the Caribbean</li> 
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees5.jpg">
+        <div style="z-index: 10; text-align: left; width: 90%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.85); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; display:inline-block; line-height: 1.2em">
+          <div style="width: 32%; float: left;">
+            <p style="font-size: 1.3em;"><strong>GDSC Data</strong></p>
+            <ul style="font-size: 0.8em">
+              <li>ACS Race and Ethnic Origin</li> 
+              <li>ACS Income and Poverty Status</li> 
+              <li>ACS Housing Units Occupancy and Costs</li> 
+              <li>ACS Educational Attainment</li> 
+              <li>ACS Health Insurance</li> 
+              <li>ACS Spoken Languages</li> 
+              <li>HOLC Redlining Grades</li> 
+              <li>RER Qualified Opportunity Zones</li> 
+              <li>Municipal Zoning</li> 
+              <li>EIA Energy Sources</li> 
+              <li>CDC Social Vulnerability Index</li> 
+              <li>Historical Hurricane Tracks</li> 
+            </ul>
+          </div>
+          <div style="width: 28%; float: left; margin-top: 42px; margin-left: 42px">
+            <ul style="font-size: 0.8em">
+              <li>Storm Surge Models</li> 
+              <li>Urban Heat Islands</li>
+              <li>EPA Environmental Hazards</li> 
+              <li>EPA Air Quality Index</li> 
+              <li>MDC Lidar Elevation</li> 
+              <li>MDC Public Services</li> 
+              <li>MDC Public Transportation</li> 
+              <li>MDC parcel data</li> 
+              <li>WAZE historical traffic data</li> 
+              <li>Section 8 data</li> 
+              <li>Historic Properties</li> 
+              <li>Municipal zoning</li> 
+              <li>Political districts</li> 
+              <li>FEMA flood zones </li>
+            </ul>
+          </div>
+          <div style="width: 32%; float: left; margin-left: 23px;">
+            <span style="margin-top: 7px; margin-bottom: 13px; display: inline-block;">University of Miami Data</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Building footprints</li> 
+              <li>UM Building interiors</li> 
+              <li>UM Emergency infrastructure</li> 
+              <li>UM Green buildings</li> 
+              <li>UM Tree inventory</li> 
+              <li>UM Parking and Transportation</li>
+            </ul>
+            <span style="margin-top: 13px; margin-bottom: 13px; display: inline-block;">IDSC Drone Surveys</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Coral Gables Campus</li> 
+              <li>Selected MDC parks</li> 
+              <li>Selected MDC historic buildings</li> 
+              <li>Selected MDC neighborhoods</li> 
+              <li>Selected sites in Latin America and the Caribbean</li> 
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Turtlebox
+            * -->
+      <!-- <section data-autoslide="10000" section data-background-image="common/assets/img/virtu.png" data-transition="fade">
+        <div>
+          <div class="um-template-title" style="margin-bottom: 23px !important; color: #ffedca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">Geographic Data as Research Output</div>
+          <div style="font-size: 70%; text-align: center; width: 100%; margin: 0px auto 500px auto; color: #ffedca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">
+          </div>
+        </div>
+        <
+      </section> -->
+
+      <!-- ***
+            * Colombia
+            * -->
+      <section data-autoslide="17000" data-background-video="common/assets/video/LasFloresAnimation3cut.mp4"  data-background-video-muted data-transition="fade" data-background-color="#000">
+        <div>
+          <div class="um-template-title" style="position: absolute; z-index: 10; top: 0px; left: 100px; margin: 0px; padding: 0px; text-align:  left; color: #edffca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">Drone Surveys,<br>point clouds,<br>and orthographic images</div>
+          <div style="position: absolute; z-index: 10; top: 620px; left: 100px; margin: 0px; padding: 0px; color: #edffca; font-size: 0.6em;text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e; text-align: left;">point cloud: Chris Mader and Amin Sarafraz</div>
+        </div>
+        <div style="position: absolute; z-index: 10; top: 0px; right: 100px; margin: 0px; padding: 0px;"><img src="common/assets/img/100.jpg" style="height: 200px;"></div>
+        <div style="position: absolute; z-index: 10; top: 220px; right: 100px; margin: 0px; padding: 0px;"><img src="common/assets/img/200.jpg" style="height: 170px;"></div>
+        <div style="position: absolute; z-index: 10; top: 410px; right: 100px; margin: 0px; padding: 0px;"><img src="common/assets/img/600.jpg" style="height: 135px;"></div>
+      </section>
+
+      <!-- So many maps -->
+      <!--<section data-transition="fade" data-transition-speed="slow" data-background-color="#fff">
+        <img src="common/assets/img/Multiples_Servicios.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow" data-background-color="#fff">       
+        <img src="common/assets/img/Multiples_Vivienda_Publica.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section> -->
+
+      <!-- ***
+            * GIS and Special Collections
+            * -->
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;"><span style="font-size: 3em !important">GDSC</span></div>
+          <div style="max-width: 70%; margin-top: -23px;">
+            <p>GIS, Data Curation, and Storytelling</p>
+            <ul style="font-size: 90%;">
+              <li><i>Quality metadata</i></li>
+              <li><i>Proper sharing licenses/agreements</i></li>
+              <li><i>Interdisciplinary problem solving</i></li>
+              <li><i>Synthetic analysis and visualization</i></li>
+              <li><i>Relevant applied science</i></li>
+            </ul>
+            <p>A well constructed GIS is a <i><b>special collection</b></i> made<br>purposefully to curate <i><b> cartographic exhibits</b></i> with <br><i><b>dynamic geospatial data</b></i>.</p>
+          </div><br>
+          <div><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 513px;"></div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Back on Track (outline)
+            * -->
+      <!-- <section data-autoslide="10000" data-transition="fade" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">What is Data Science<br>&nbsp;&nbsp;&<br>&nbsp;&nbsp;&nbsp;What is a Data Scientist?</div>
+          <div style="margin-bottom: 200px; font-size: 90%; margin-left: 23px;">
+            <ul>
+                <li style="color: #aaa;"><i>Beginnings</i></li>
+                <li style="color: #aaa;"><i>Data Curation</i></li>
+                <li style="color: #aaa;"><i>A Few Examples</i></b></li>
+                <li><b><i>A Political Economy of Data</i></b></li>
+                <li style="color: #aaa;"><i>Some Time for Questions and Discussion</i></li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ***
+            *  Thanks
+            * -->
+      <!-- <section data-autoslide="10000" data-background-image="common/assets/img/WhereAreWeGoingIDSC.jpg">
+        <div style="margin-left: 70px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">Thanks!</div>
+          <div style="margin-bottom: 100px; font-size: 90%">
+            Timothy B Norris<br>
+            <a href="mailto:tnorris@miami.edu" style="color: black !important;">tnorris@miami.edu</a>
+          </div>
+          <div style="margin-bottom: 200px; width: 350px; font-size: 90%">
+            Coda: data curation is a human activity. There is no way to express gratitude to all of the people who have supported this work - you know who you are.
+          </div>
+        </div>
+      </section> -->
+
+    </div>
+  </div>
+  <script src="common/java/reveal.js"></script>
+	<script src="common/java/notes.js"></script>
+  <script src="common/java/head.min.js"></script>
+  <script>
+    Reveal.initialize({
+        width: 1366, height: 768, margin: 0.05,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        mouseWheel: false,
+        autoSlide: 10000,
+        loop: true,
+        chart: {
+          defaults: { 
+            global: { 
+              defaultFontSize: 20,
+              title: { fontColor: "#333" }, 
+              legend: {
+                position: "top",
+                labels: { fontColor: "#333" },
+              },
+              tooltips: {
+                labels: { fontColor: "#333" },
+              },
+            }, 
+            scale: { 
+              scaleLabel: { fontColor: "#333" }, 
+              gridLines: { color: "#333", zeroLineColor: "#333" }, 
+              ticks: { fontColor: "#333" }, 
+            } 
+          },
+        },
+        dependencies: [
+            { src: 'common/java/Chart.min.js' },
+            { src: 'common/java/csv2chart.js' }
+        ] 
+    });
+  </script>
+</body>
+</html>
