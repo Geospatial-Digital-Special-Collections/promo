@@ -1,4 +1,4 @@
-# data science
+# University of Miami Geospatial Digital Collections (GDSC)
 
 This repository contains a promotional presentation about the University of Miami Geospatial Digital Special Collections (GDSC).
 
