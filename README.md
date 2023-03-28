@@ -1,8 +1,8 @@
 # data science
 
-This repository contains a presentation about emerging themes in data science.
+This repository contains a promotional presentation about the University of Miami Geospatial Digital Special Collections (GDSC).
 
-For the actual presentation, plesae see the [hosted version](https://tibbben.github.io/data-science).
+For the actual presentation, please see the [hosted version](https://tibbben.github.io/GDSCpromo).
 
 ---
 
