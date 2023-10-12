@@ -27,8 +27,36 @@
             <span style="font-size: 0.85em; line-height: 32px; display: block; margin-top: 13px;"><strong>Christopher Mader</strong> - Director of Software and Data Engineering<br>Institute for Data Science and Computing - <a href="mailto:cmader@med.miami.edu">cmader@med.miami.edu</a></span>
           </div>
           <div><img src="common/assets/img/UM-data-science-computing.jpg" style="max-width: 280px; margin-left: 42px;"><img src="common/assets/img/UM-libraries.png" style="max-width: 280px; margin-left: 513px;"></div>
+          <div style="position:absolute; top: 0px; right: 70px;"><img src="common/assets/img/NACIS2023.png" style="max-width: 120px; max-height:120px"></div>
         </div>
       </section>
+
+      <!--<section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/001_IDSC_start.png"></section>-->
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/001a_IDSC_start2.jpg"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/002_MAP1_ss.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/003_MAP_holc.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/004_MAP_heat_ss.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/005_MAP_landuse_ss.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/006_MAP_elevation.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/007_MAP_sealevel.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/008_xsat_0.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/009_XSAT_1.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/010_xsat_2.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/011_lasflores_1.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/012_las_flores2.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/virtu.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/013_pick-parcels-interactive-map.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/014_DVMT_2.png"></section>
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/015_DVMT_3.png"></section>
+
+
+
+
+
+
+
+
+
 
       <!-- ***
             * GIS and Special Collections
@@ -59,6 +87,7 @@
             <p>Provide well curated data collections that are<br>findable, accessible, interoperable, and reusable.</p>
             <ul style="font-size: 90%;">
               <li><i>Container based architecture for data as a service</i></li>
+              <li><i>Centrally located metadata store with crosswalks included</i></li>
               <li><i>Reusable structured data packages in PostGIS</i></li>
               <li><i>Transparent provenance of ETL process</i></li>
               <li><i>Metadata guided by (geo) DCAT</i></li>
@@ -72,19 +101,36 @@
       </section>
 
       <section data-transition="fade" data-transition-speed="slow">
-        <div style="max-Width: 40%; text-align: left !important; float: left; margin-left: 60px;">
-          <div style="position: absolute; top 42px; left: 120px;" class="um-template-title">A Container Based Approach</div>
-          <span style="font-size: 0.7em; display: block; margin-top: 90px;">GDSC is a system built with many moving pieces working together to provide: 
-          <ol style="margin-top: 13px; margin-bottom: 13px;">
-            <li>Map and data services that can be consumed by humans or machines.</li>
-            <li>User interfaces for the discovery of data in GDSC.</li>
-            <li>Applications that meet a variety of needs to serve both endpoints for  data services and  interfaces for human users.</li>
-            <li>Back-end datastore that is sustainable and resilient.</li>
-            <li>Management tools for collection building and maintenance.</li>
-          </ol>
-          The system is built as a set of Docker containers managed by Kubernetes. This architecture enables flexibility and scaleability for service provision.</span>
+        <div style="text-align: left !important; margin: 0px auto;">
+          <div class="um-template-title">Basically a Repository?</div>
         </div>
-        <div STYLE="max-Width: 50%; float: right; margin-right: 70px; margin-top: -50px;"><img src="common/assets/img/gdsc_implementation_v4.jpg"></div>
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdsc_arch.jpg"></div>
+        <div style="margin: 13px auto; font-size: 0.53em; color: #aaa;">stick figure image credit: XKCD <a href="https://xkcd.com/927" style="color: #99e;">https://xkcd.com/927</a></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <img src="common/assets/img/xkcd_standards_2x.png">
+        <div style="margin: 13px auto; font-size: 0.53em; color: #aaa;">XKCD <a href="https://xkcd.com/927" style="color: #99e;">https://xkcd.com/927</a></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="max-Width: 42%; text-align: left !important; float: left; margin-left: 40px;">
+          <div style="position: absolute; top 42px; left: 120px;" class="um-template-title">A Container Based Approach</div>
+          <span style="font-size: 0.7em; display: block; margin-top: 90px;">GDSC system requirements: 
+          <ol style="margin-top: 32px; margin-bottom: 32px;">
+            <li style="margin-bottom: 7px;"><u>Map and data services</u> that can be consumed by humans or machines.</li>
+            <li style="margin-bottom: 7px;"><u>User interfaces</u> for the discovery and consumption of spatial data.</li>
+            <li style="margin-bottom: 7px;"><u>Applications</u> that meet a variety of needs to serve both endpoints for  data services and  interfaces for human users.</li>
+            <li style="margin-bottom: 7px;">Back-end <u>datastore</u> that is sustainable and resilient.</li>
+            <li><u>Management tools</u> for collection building and maintenance.</li>
+          </ol>
+          Built as <strong>docker containers</strong> managed by <strong>Kubernetes</strong> to enable flexibility and scaleability.</span>
+        </div>
+        <div STYLE="max-Width: 50%; float: right; margin-right: 40px; margin-top: -50px;"><img src="common/assets/img/gdsc_implementation_v4.jpg"></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch12.jpg" style="max-width: 80%;"></div>
       </section>
 
       <section data-transition="fade" data-transition-speed="slow">
@@ -206,6 +252,42 @@ NOTIFY pgrst, 'reload schema';</pre>
         </div>
       </section>
 
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch23.jpg" style="max-width: 80%;"></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch34.jpg" style="max-width: 80%;"></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="text-align: left !important; margin: 0px auto;">
+          <div class="um-template-title">Flexibility and Scaleability</div>
+        </div>
+        <img class="fragment" data-fragment-index="3" style="max-height: 180px; position: absolute; top: 90px; left: 70px;" src="common/assets/img/gdscfederate3.jpg">
+        <img class="fragment" data-fragment-index="2" style="max-height: 230px;  position: absolute; top: 125px; left: 220px;" src="common/assets/img/gdscfederate2.jpg">
+        <div class="fragment" data-fragment-index="2" style="position: absolute; top: 450px; left: 50px; font-size: 0.8em; text-align: left;">
+          Federated collections<br><span style="font-size: 0.8em"><em>serving other institutional<br>or regional needs</em></span>
+        </div>
+        <img class="fragment" data-fragment-index="1"  style="max-height: 300px; position: absolute; top: 160px; left: 420px;" src="common/assets/img/gdscfederate1.jpg">
+        <img style="max-height: 400px; position: absolute; top: 180px; left: 670px;" src="common/assets/img/gdscscale.jpg">
+        <div class="fragment" data-fragment-index="5" style="position: absolute; top: 420px; right: 20px; font-size: 0.8em; text-align: right;">
+          Decoupled components<br>
+          <span style="font-size: 0.8em"><em>application specific requirements<br>(eg. DVMT or OHDSI GIS)</em></span>
+        </div>
+        <img class="fragment" data-fragment-index="4" style="max-height: 190px; position: absolute; top: 160px; left: 990px;" src="common/assets/img/gdscdecouple1.jpg">
+        <img class="fragment" data-fragment-index="5" style="max-height: 150px;  position: absolute; top: 125px; left: 1130px;" src="common/assets/img/gdscdecouple3.jpg">
+        <img class="fragment" data-fragment-index="6" style="max-height: 120px;  position: absolute; top: 90px; left: 1240px;" src="common/assets/img/gdscdecouple3.jpg">
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch45.jpg" style="max-width: 80%;"></div>
+        <div style="position: absolute; bottom: -130px; left: 230px;"><img src="common/assets/img/portal.png" style="max-width: 120px; max-height: 120px;"></div>
+        <div style="position: absolute; bottom: -70px; left: 880px;"><img src="common/assets/img/GDSC_QRCode.png" style="max-width: 120px; max-height: 120px;"></div>
+        <div style="position: absolute; bottom: -130px; left: 480px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/addressquery.png" style="max-width: 120px; max-height: 120px;"></div>
+        <div style="position: absolute; bottom: -160px; left: 360px; max-width: 930px; overflow-wrap: break-word; text-align: left; font-size: 0.4em;"><a style="color: #99f;" href="https://gdsc.idsc.miami.edu/functions/mdc_property_point_view?<select=true_mailing_addr1,true_mailing_city,true_mailing_zip_code,folio,x_coord,y_coord&true_mailing_addr1=like.*5835*&limit=10">https://gdsc.idsc.miami.edu/functions/mdc_property_point_view?<br>select=true_mailing_addr1,true_mailing_city,true_mailing_zip_code,folio,x_coord,y_coord&true_mailing_addr1=like.*5835*&limit=10</a></div>
+      </section>
+
       <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/DVMT1.jpg" data-background-size="contain">
         <div style="position:absolute; width: 380px; top: 0px; right: 0px; font-size: 0.6em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
           <h2>DVMT Collection</h2>
@@ -259,6 +341,21 @@ NOTIFY pgrst, 'reload schema';</pre>
         </div>
       </section> -->
 
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">Some next steps</div>
+          <div style="max-width: 85%; margin: 0px auto;">
+            <ul style="font-size: 90%;">
+              <li><i>Raster tile services for all raster and map layers.</i></li>
+              <li><i>Downloads for collections, both project templates and data</i></li>
+              <li><i>Publish federated metadata.</i></li>
+              <li style="margin-bottom: 23px;"><i>Allow users to create accounts and customize their own collections.</i></li>
+              <li><i>Other ideas?</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- ***
             *  Thanks
             * -->
@@ -277,6 +374,8 @@ NOTIFY pgrst, 'reload schema';</pre>
           <div><img src="common/assets/img/UM-data-science-computing.jpg" style="max-width: 280px; margin-left: 42px;"><img src="common/assets/img/UM-libraries.png" style="max-width: 280px; margin-left: 513px;"></div>
         </div>
       </section>
+
+      <section data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/IDSC_end.png"></section>
 
     </div>
   </div>
