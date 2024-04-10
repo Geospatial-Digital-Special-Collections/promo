@@ -2,7 +2,7 @@
 
 This repository contains a promotional presentation about the University of Miami Geospatial Digital Special Collections (GDSC).
 
-For the actual presentation, please see the [hosted version](https://tibbben.github.io/GDSCpromo).
+For the actual presentation, please see the [hosted version](https://geospatial-digital-special-collections.github.io/promo/#/).
 
 ---
 
@@ -27,3 +27,6 @@ Please see the full license terms here: https://creativecommons.org/licenses/by/
 
 Timothy Norris, PhD
 tnorris@miami.edu
+
+Chris Mader
+cmader@med.miami.edu
