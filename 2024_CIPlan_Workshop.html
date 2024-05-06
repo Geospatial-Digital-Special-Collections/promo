@@ -1,0 +1,714 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="common/css/reveal.css">
+  <link rel="stylesheet" href="common/css/white.css">
+  <link rel="stylesheet" href="common/css/overrides.css">
+  <script src="common/java/print.js"></script>
+  <title>GDSC - Geospatial Digital Special Collections</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+    
+      <!-- ***
+            * Title Slide Branded
+            * -->
+      <!-- <section data-autoslide="10000" data-transition="fade" data-background-image="common/assets/img/titlePage.png">
+        <div style="position: absolute; top: 0px; left: 0px;">
+          <div style="color: white; margin-top: 0px; text-align: left; margin-left: 340px; margin-bottom: 23px;"  ><strong><br>&nbsp;<br>Geospatial Digital Special Collections<br>&nbsp;GDSC</strong><br><br></div>
+          <div style="color: black; margin-top: 23px; margin-left: 330px; text-align: left; font-size: 0.8em"><strong>Institute for Data Science and Computing</strong><br><strong>University of Miami Libraries</strong></div>
+          <div style="color: white; margin-left: 340px; margin-top: 125px; font-size: 60%;">
+            <div style="text-align: left; float: left;">2022-05-19 Smart Cities Miami Conference and Symposium<br>Timothy B Norris <a href="mailto:tnorris@miami.edu" style="color: #fff; text-decoration: underline;">tnorris@miami.edu</a>&nbsp;|&nbspChris Mader <a href="mailto:cmader@med.miami.edu" style="color: #fff; text-decoration: underline;">cmader@med.miami.edu</a></div>
+            <div style="text-align: right; float: right; margin-left: 70px;"></div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- **********************************************************************************
+            * Outline
+            * -->
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;"><span style="font-size: 3em !important; padding-left: 140px;">GDSC</span><br>&nbsp;&nbsp;<br>Geospatial Digital Special Collections</div>
+          <div style="margin-top: 42px; margin-bottom: 100px; font-size: 90%; margin-left: 23px; font-style: italic; width: 65%">
+            GDSC <strong>facilitates interdisciplinary research</strong> by<br>streamlining data acquisition, metadata and data harmonization,<br>and format transformations necessary to use <strong>geospatial data</strong><br>in the formulation and investigation of research<br>questions with a geographical component.
+          </div>
+          <div><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 513px;"></div>
+        </div>
+        <div style="position: absolute; top: 0px; right: 0px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/GDSC_promo_QRCode.png" style="max-width: 180px; max-height: 180px;"></div>
+        <div style="position: absolute; top: 0px; left: 0px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/gdsc_color.jpg" style="max-width: 180px; max-height: 180px;"></div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_below_poverty.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(255,255,255,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #000 ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          As a key component in efforts to understand the human condition, geospatial datasets inform and support basic research, decision making, urban planning and analytics, the production of maps, and other forms of geovisualization.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_owner_occupied.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(255,255,255,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #000 ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          These activities are based on widely available sources of geospatial data that span scales from global to local, such as Google Earth, OpenStreetMap (OSM), the Census Bureau’s American Community Survey (ACS), the Miami-Dade open data portal, and so on.
+        </div>
+      </section>
+
+      <section data-autoslide="6000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_year_built.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(255,255,255,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #000 ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          Geospatial datasets are also increasingly produced as the result of academic research and other planning activities.
+        </div>
+      </section>
+
+      <section data-autoslide="9000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_owner_burdened.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(255,255,255,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #000 ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          But discovery, access, and re-use of relevant data can be challenging and time-consuming. Researchers must locate and acquire data sets from varied institutions, understand metadata and analytical limitations, and harmonize disparate file formats and geographies.
+        </div>
+      </section>
+
+      <section data-autoslide="6000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/census_renter_burdened.jpg">
+        <div style="position: absolute; z-index: 10; top: -300px; left: 120px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(255,255,255,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #000 ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          Such data curation requires analytical skill and often duplicates tasks that slow scientific discovery. 
+        </div>
+      </section>
+
+      <!-- ***
+            * GIS and Special Collections
+            * -->
+      <section data-autoslide="12000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;"><span style="font-size: 3em !important; padding-left: 140px;">GDSC</span><br>&nbsp;&nbsp;<br>Geospatial Digital Special Collections</div>
+          <div style="max-width: 45%; margin-top: -23px; font-size: 0.9em;">
+            <p>As a result of these difficulties, geospatial data struggle to be Findable, Accessible, Interoperable, and Reusable, or <strong>FAIR</strong>.</p><p>This is not to discount decades of work by government agencies and private data aggregators, but GIS data still suffer from:</p>
+            <ul>
+              <li><i>Multiple sources and standards</i></li>
+              <li><i>Difficult harmonization</i></li>
+              <li><i>Repeated curation work</i></li>
+            </ul>
+          </div>
+        </div>
+        <div style="position: absolute; bottom: -50px; right: 0px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/GDSC_promo_QRCode.png" style="max-width: 180px; max-height: 180px;"></div>
+        <div style="position: absolute; top: 0px; left: 0px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/gdsc_color.jpg" style="max-width: 180px; max-height: 180px;"></div>
+      </section>
+
+      <!-- <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/storm_surge.jpg">
+        <div style="position: absolute; z-index: 10; top: -340px; left: 20px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(255,255,255,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #000 ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          As a solution to this difficulty, GDSC is a joint initiative between the Institute for Data Science and Computing (IDSC) and the University of Miami Libraries to make geographic data at the University of Miami more discoverable, accessible, and interoperable.
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/sea_level_rise.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 60px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(127,138,190,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          To do this GDSC provides a non-proprietary platform to dynamically discover, publish, and/or consume geographic data as a service.
+        </div>
+        <div style="position: absolute; top: 550px; font-size:0.4em; background-color: #fff; padding: 7px 13px; border-radius: 4px">100 year sea level rise</div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/surface_temperature.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 180px; text-align: justified; width: 60%; font-size: 0.8em; background-color: rgba(180,138,139,0.85); border-radius: 13px; padding: 23px; border: 1px solid #000; color: #fff ;font-style: italic; line-height: 1.4em; font-weight: 800">
+          The data made available through GDSC is a highly curated set of collections--or special collections--of geographic data with coverage in south Florida and the Global South of the western hemisphere.
+        </div>
+        <div style="position: absolute; top: 550px; font-size:0.4em; background-color: #fff; padding: 7px 13px; border-radius: 4px">Surface Temperature 2011-2018</div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees1.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 120px; text-align: left; width: 60%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.7); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; font-weight: 800">
+          <p>We invite your contributions to GDSC:</p>
+          <ul style="font-size: 0.95em">
+            <li>Suggest datasets of interest to be included in GDSC</li>
+            <li>Submit your geographic data for publication in GDSC</li>
+            <li>Participate on the GDSC governance board </li>
+          </ul>
+          <p>If you have questions, please contact <a href="mailto:tnorris@miami.edu" style="color: #fff;">tnorris@miami.edu</a>.</p>
+        </div>
+        <div style="background-color: rgba(255,255,255,0.8); margin-top: 550px; width: 90%"><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 42px;"></div>
+        <div style="position: absolute; top: 250px; right: 0px; font-size: 0.8em; line-height: 0.34em; text-align: center; color: #fff;">GDSC catalog <img src="common/assets/img/GDSC_QRCode.png" style="max-width: 180px; max-height: 180px; margin: 0px !important"></div>
+        <div style="position: absolute; top: 0px; right: 5px; font-size: 0.8em; line-height: 0.34em; text-align: center; color: #fff;"><img src="common/assets/img/GDSC_github_QR.png" style="max-width: 180px; max-height: 180px;"><br>GDSC github</div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees2.jpg">
+        <div style="position: absolute; z-index: 10; top: 0px; left: 120px; text-align: left; width: 60%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.7); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; font-weight: 800">
+          <p>We invite your contributions to GDSC:</p>
+          <ul style="font-size: 0.95em">
+            <li>Suggest datasets of interest to be included in GDSC</li>
+            <li>Submit your geographic data for publication in GDSC</li>
+            <li>Participate on the GDSC governance board </li>
+          </ul>
+          <p>If you have questions, please contact <a href="mailto:tnorris@miami.edu" style="color: #fff;">tnorris@miami.edu</a>.</p>
+        </div>
+        <div style="background-color: rgba(255,255,255,0.8); margin-top: 550px; width: 90%"><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 42px;"></div>
+        <div style="position: absolute; top: 250px; right: 0px; font-size: 0.8em; line-height: 0.34em; text-align: center; color: #fff;">GDSC catalog <img src="common/assets/img/GDSC_QRCode.png" style="max-width: 180px; max-height: 180px; margin: 0px !important"></div>
+        <div style="position: absolute; top: 0px; right: 5px; font-size: 0.8em; line-height: 0.34em; text-align: center; color: #fff;"><img src="common/assets/img/GDSC_github_QR.png" style="max-width: 180px; max-height: 180px;"><br>GDSC github</div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees3.jpg">
+        <div style="z-index: 10; text-align: left; width: 90%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.85); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; display:inline-block; line-height: 1.2em">
+          <div style="width: 32%; float: left;">
+            <p style="font-size: 1.3em;"><strong>GDSC Data</strong></p>
+            <ul style="font-size: 0.8em">
+              <li>ACS Race and Ethnic Origin</li> 
+              <li>ACS Income and Poverty Status</li> 
+              <li>ACS Housing Units Occupancy and Costs</li> 
+              <li>ACS Educational Attainment</li> 
+              <li>ACS Health Insurance</li> 
+              <li>ACS Spoken Languages</li> 
+              <li>HOLC Redlining Grades</li> 
+              <li>RER Qualified Opportunity Zones</li> 
+              <li>Municipal Zoning</li> 
+              <li>EIA Energy Sources</li> 
+              <li>CDC Social Vulnerability Index</li> 
+            </ul>
+          </div>
+          <div style="width: 28%; float: left; margin-top: 42px; margin-left: 42px">
+            <ul style="font-size: 0.8em">
+              <li>Storm Surge Models</li> 
+              <li>Urban Heat Islands</li>
+              <li>EPA Environmental Hazards</li> 
+              <li>EPA Air Quality Index</li> 
+              <li>MDC Lidar Elevation</li> 
+              <li>MDC Public Services</li> 
+              <li>MDC Public Transportation</li> 
+              <li>MDC parcel data</li> 
+              <li>WAZE historical traffic data</li> 
+              <li>Section 8 data</li> 
+              <li>Historic Properties</li> 
+              <li>Political districts</li> 
+              <li>FEMA flood zones </li>
+            </ul>
+          </div>
+          <div style="width: 32%; float: left; margin-left: 23px;">
+            <span style="margin-top: 7px; margin-bottom: 13px; display: inline-block;">University of Miami Data</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Building footprints</li> 
+              <li>UM Building interiors</li> 
+              <li>UM Emergency infrastructure</li> 
+              <li>UM Green buildings</li> 
+              <li>UM Tree inventory</li> 
+              <li>UM Parking and Transportation</li>
+            </ul>
+            <span style="margin-top: 13px; margin-bottom: 13px; display: inline-block;">IDSC Drone Surveys</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Coral Gables Campus</li> 
+              <li>Selected MDC parks</li> 
+              <li>Selected MDC historic buildings</li> 
+              <li>Selected MDC neighborhoods</li> 
+              <li>Selected sites in Latin America and the Caribbean</li> 
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees4.jpg">
+        <div style="z-index: 10; text-align: left; width: 90%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.85); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; display:inline-block; line-height: 1.2em">
+          <div style="width: 32%; float: left;">
+            <p style="font-size: 1.3em;"><strong>GDSC Data</strong></p>
+            <ul style="font-size: 0.8em">
+              <li>ACS Race and Ethnic Origin</li> 
+              <li>ACS Income and Poverty Status</li> 
+              <li>ACS Housing Units Occupancy and Costs</li> 
+              <li>ACS Educational Attainment</li> 
+              <li>ACS Health Insurance</li> 
+              <li>ACS Spoken Languages</li> 
+              <li>HOLC Redlining Grades</li> 
+              <li>RER Qualified Opportunity Zones</li> 
+              <li>Municipal Zoning</li> 
+              <li>EIA Energy Sources</li> 
+              <li>CDC Social Vulnerability Index</li> 
+            </ul>
+          </div>
+          <div style="width: 28%; float: left; margin-top: 42px; margin-left: 42px">
+            <ul style="font-size: 0.8em">
+              <li>Storm Surge Models</li> 
+              <li>Urban Heat Islands</li>
+              <li>EPA Environmental Hazards</li> 
+              <li>EPA Air Quality Index</li> 
+              <li>MDC Lidar Elevation</li> 
+              <li>MDC Public Services</li> 
+              <li>MDC Public Transportation</li> 
+              <li>MDC parcel data</li> 
+              <li>WAZE historical traffic data</li> 
+              <li>Section 8 data</li> 
+              <li>Historic Properties</li> 
+              <li>Political districts</li> 
+              <li>FEMA flood zones </li>
+            </ul>
+          </div>
+          <div style="width: 32%; float: left; margin-left: 23px;">
+            <span style="margin-top: 7px; margin-bottom: 13px; display: inline-block;">University of Miami Data</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Building footprints</li> 
+              <li>UM Building interiors</li> 
+              <li>UM Emergency infrastructure</li> 
+              <li>UM Green buildings</li> 
+              <li>UM Tree inventory</li> 
+              <li>UM Parking and Transportation</li>
+            </ul>
+            <span style="margin-top: 13px; margin-bottom: 13px; display: inline-block;">IDSC Drone Surveys</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Coral Gables Campus</li> 
+              <li>Selected MDC parks</li> 
+              <li>Selected MDC historic buildings</li> 
+              <li>Selected MDC neighborhoods</li> 
+              <li>Selected sites in Latin America and the Caribbean</li> 
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/trees5.jpg">
+        <div style="z-index: 10; text-align: left; width: 90%; font-size: 0.7em; color: #fff; background-color: rgba(50,100,50,0.85); border-radius: 13px; padding: 23px; text-shadow: 0px 0px 13px #154e30, 0px 0px 13px #154e30, 0px 0px 13px #154e30; border: 1px solid #aaa; display:inline-block; line-height: 1.2em">
+          <div style="width: 32%; float: left;">
+            <p style="font-size: 1.3em;"><strong>GDSC Data</strong></p>
+            <ul style="font-size: 0.8em">
+              <li>ACS Race and Ethnic Origin</li> 
+              <li>ACS Income and Poverty Status</li> 
+              <li>ACS Housing Units Occupancy and Costs</li> 
+              <li>ACS Educational Attainment</li> 
+              <li>ACS Health Insurance</li> 
+              <li>ACS Spoken Languages</li> 
+              <li>HOLC Redlining Grades</li> 
+              <li>RER Qualified Opportunity Zones</li> 
+              <li>Municipal Zoning</li> 
+              <li>EIA Energy Sources</li> 
+              <li>CDC Social Vulnerability Index</li> 
+            </ul>
+          </div>
+          <div style="width: 28%; float: left; margin-top: 42px; margin-left: 42px">
+            <ul style="font-size: 0.8em">
+              <li>Storm Surge Models</li> 
+              <li>Urban Heat Islands</li>
+              <li>EPA Environmental Hazards</li> 
+              <li>EPA Air Quality Index</li> 
+              <li>MDC Lidar Elevation</li> 
+              <li>MDC Public Services</li> 
+              <li>MDC Public Transportation</li> 
+              <li>MDC parcel data</li> 
+              <li>WAZE historical traffic data</li> 
+              <li>Section 8 data</li> 
+              <li>Historic Properties</li> 
+              <li>Political districts</li> 
+              <li>FEMA flood zones </li>
+            </ul>
+          </div>
+          <div style="width: 32%; float: left; margin-left: 23px;">
+            <span style="margin-top: 7px; margin-bottom: 13px; display: inline-block;">University of Miami Data</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Building footprints</li> 
+              <li>UM Building interiors</li> 
+              <li>UM Emergency infrastructure</li> 
+              <li>UM Green buildings</li> 
+              <li>UM Tree inventory</li> 
+              <li>UM Parking and Transportation</li>
+            </ul>
+            <span style="margin-top: 13px; margin-bottom: 13px; display: inline-block;">IDSC Drone Surveys</span>
+            <ul style="font-size: 0.8em">
+              <li>UM Coral Gables Campus</li> 
+              <li>Selected MDC parks</li> 
+              <li>Selected MDC historic buildings</li> 
+              <li>Selected MDC neighborhoods</li> 
+              <li>Selected sites in Latin America and the Caribbean</li> 
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ***
+            * Turtlebox
+            * -->
+      <!-- <section data-autoslide="10000" section data-background-image="common/assets/img/virtu.png" data-transition="fade">
+        <div>
+          <div class="um-template-title" style="margin-bottom: 23px !important; color: #ffedca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">Geographic Data as Research Output</div>
+          <div style="font-size: 70%; text-align: center; width: 100%; margin: 0px auto 500px auto; color: #ffedca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">
+          </div>
+        </div>
+        <
+      </section> -->
+
+      <!-- ***
+            * Colombia
+            * -->
+      <!--<section data-autoslide="23000" data-background-video="common/assets/video/LasFloresAnimation3cut.mp4"  data-background-video-muted data-transition="fade" data-transition-speed="slow" data-background-color="#000">
+        <div>
+          <div class="um-template-title" style="position: absolute; z-index: 10; top: 0px; left: 100px; margin: 0px; padding: 0px; text-align:  left; color: #edffca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">Drone Surveys,<br>point clouds,<br>and orthographic images</div>
+          <div style="position: absolute; z-index: 10; top: 620px; left: 100px; margin: 0px; padding: 0px; color: #edffca; font-size: 0.6em;text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e; text-align: left;">point cloud: Chris Mader and Amin Sarafraz</div>
+        </div>
+        <div style="position: absolute; z-index: 10; top: 0px; right: 100px; margin: 0px; padding: 0px;"><img src="common/assets/img/100.jpg" style="height: 200px;"></div>
+        <div style="position: absolute; z-index: 10; top: 220px; right: 100px; margin: 0px; padding: 0px;"><img src="common/assets/img/200.jpg" style="height: 170px;"></div>
+        <div style="position: absolute; z-index: 10; top: 410px; right: 100px; margin: 0px; padding: 0px;"><img src="common/assets/img/600.jpg" style="height: 135px;"></div>
+      </section> -->
+
+      <!-- So many maps -->
+      <!--<section data-transition="fade" data-transition-speed="slow" data-background-color="#fff">
+        <img src="common/assets/img/Multiples_Servicios.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow" data-background-color="#fff">       
+        <img src="common/assets/img/Multiples_Vivienda_Publica.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section> -->
+
+      <!-- ***
+            * GIS and Special Collections
+            * -->
+      <section data-autoslide="15000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;"><span style="font-size: 3em !important; padding-left: 140px;">GDSC</span></div>
+          <div style="max-width: 70%; margin-top: -23px;">
+            <p style="padding-left: 140px;">GIS, Data Curation, and Storytelling</p>
+            <ul style="font-size: 90%;">
+              <li><i>Quality metadata</i></li>
+              <li><i>Proper sharing licenses/agreements</i></li>
+              <li><i>Interdisciplinary problem solving</i></li>
+              <li><i>Synthetic analysis and visualization</i></li>
+              <li><i>Relevant applied science</i></li>
+            </ul>
+            <p>A well constructed GIS is a <i><b>special collection</b></i> made<br>purposefully to curate <i><b> cartographic exhibits</b></i> with <br><i><b>dynamic geospatial data</b></i>.</p>
+          </div><br>
+          <div><img src="common/assets/img/UM-idsc.png" style="max-width: 310px; margin-left: 42px;"><img src="common/assets/img/UM-library.png" style="max-width: 310px; margin-left: 513px;"></div>
+        </div>
+        <div style="position: absolute; top: 0px; left: 0px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/gdsc_color.jpg" style="max-width: 180px; max-height: 180px;"></div>
+        <div style="position: absolute; top: 250px; right: 0px; font-size: 0.8em; line-height: 0.34em; text-align: center;"><img src="common/assets/img/GDSC_QRCode.png" style="max-width: 180px; max-height: 180px;"><br>GDSC catalog</div>
+        <div style="position: absolute; top: 0px; right: 5px; font-size: 0.8em; line-height: 0.34em; text-align: center;"><img src="common/assets/img/GDSC_github_QR.png" style="max-width: 180px; max-height: 180px;"><br>GDSC github</div>
+      </section>
+
+      <!-- ***
+            * GIS and Special Collections
+            * -->
+      <section data-autoslide="15000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/gdsc_color.jpg" data-background-size="contain">
+        <div style="width: 100%; height: 110%; background-color: #fff; opacity: 0.9; padding: 60px 0px; margin-top: -60px;">
+          <div style="margin: 0px auto; !important; font-size: 80%; text-align: center;">
+            <div class="um-template-title" style="margin: 0px auto;"><span style="font-size: 2em !important">GDSC</span></div>
+            <div style="max-width: 100%; margin: 0px auto;">
+              <p>Highly curated collections that are findable, accessible, interoperable, and reusable -- <strong>FAIR</strong>.</p>
+              <ul style="font-size: 90%; margin-top: 42px;">
+                <li><i>Container based architecture for data as a service</i></li>
+                <li><i>Centrally located metadata store</i></li>
+                <li><i>Reusable structured data packages</i></li>
+                <li><i>Transparent provenance of ETL process</i></li>
+                <li><i>Metadata guided by (geo)DCAT</i></li>
+                <li><i>Apache SOLR for discovery layer</i></li>
+                <li><i>Flexible service provision with proven technologies</i></li>
+                <li style="margin-top: 42px;"><i>Two case studies: DVMT and OHDSI</i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="position: absolute; bottom: 50px; left: 0px; font-size: 0.8em; line-height: 0.34em; text-align: center;"><img src="common/assets/img/GDSC_QRCode.png" style="max-width: 180px; max-height: 180px;"><br>GDSC catalog</div>
+        <div style="position: absolute; bottom: 50px; right: 0px; font-size: 0.8em; line-height: 0.34em; text-align: center;"><img src="common/assets/img/GDSC_github_QR.png" style="max-width: 180px; max-height: 180px;"><br>GDSC github</div>  
+      </section>
+
+      <section data-autoslide="7000" data-transition="fade" data-transition-speed="slow">
+        <div style="text-align: left !important; margin: 0px auto;">
+          <div class="um-template-title">Basically a Repository?</div>
+        </div>
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdsc_arch.jpg"></div>
+        <div style="margin: 13px auto; font-size: 0.53em; color: #aaa;">stick figure image credit: XKCD <a href="https://xkcd.com/927" style="color: #99e;">https://xkcd.com/927</a></div>
+      </section>
+
+      <section data-autoslide="7000" data-transition="fade" data-transition-speed="slow">
+        <img src="common/assets/img/xkcd_standards_2x.png">
+        <div style="margin: 13px auto; font-size: 0.53em; color: #aaa;">XKCD <a href="https://xkcd.com/927" style="color: #99e;">https://xkcd.com/927</a></div>
+      </section>
+
+      <section data-autoslide="23000" data-transition="fade" data-transition-speed="slow">
+        <div style="max-Width: 42%; text-align: left !important; float: left; margin-left: 40px;">
+          <div style="position: absolute; top 42px; left: 120px;" class="um-template-title">A Container Based Approach</div>
+          <span style="font-size: 0.7em; display: block; margin-top: 90px;">GDSC system requirements: 
+          <ol style="margin-top: 32px; margin-bottom: 32px;">
+            <li style="margin-bottom: 7px;"><u>Map and data services</u> that can be consumed by humans or machines.</li>
+            <li style="margin-bottom: 7px;"><u>User interfaces</u> for the discovery and consumption of spatial data.</li>
+            <li style="margin-bottom: 7px;"><u>Applications</u> that meet a variety of needs to serve both endpoints for  data services and  interfaces for human users.</li>
+            <li style="margin-bottom: 7px;">Back-end <u>datastore</u> that is sustainable and resilient.</li>
+            <li><u>Management tools</u> for collection building and maintenance.</li>
+          </ol>
+          Built as <strong>docker containers</strong> managed by <strong>Kubernetes</strong> to enable flexibility and scaleability.</span>
+        </div>
+        <div STYLE="max-Width: 50%; float: right; margin-right: 40px; margin-top: -50px;"><img src="common/assets/img/gdsc_implementation_v4.jpg"></div>
+      </section>
+
+      <!-- <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch12.jpg" style="max-width: 80%;"></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div class="um-template-title" width="100%">The Data Package</div>
+        <div style="max-Width: 35%; text-align: left !important; float: left; font-size: 0.7em; margin-left: 60px; margin-top: 60px;">
+          Example data package to show structure and content. The processStep and the datestamp text files are essential to understand provenance of the data (from source to service) and are also included in the metadata.
+        </div>
+        <div STYLE="max-Width: 55%; float: right; margin-right: 70px; padding: 30px">
+          <pre style="width: 600px; padding: 13px;">
++-- svi2020_fl_tract/
+|   datestamp.txt
+|   +-- download/  
+|   |   SVI2020_FLORIDA_tract.gdb  
+|   +-- etl/ 
+|   |   processStep.txt  
+|   |   svi2020_fl_tract_osgeo.sh  
+|   |   svi2020_fl_tract_postgis.sh
+|   meta_dcat_svi2020_fl_tract.json
+|   meta_datacite_svi2020_fl_tract.json
+|   meta_etl_svi2020_fl_tract.json
+|   podID</pre>
+        </div>
+      </section>
+
+      <section data-autoslide="12000" data-transition="fade" data-transition-speed="slow">
+        <div class="um-template-title" width="100%" style="margin-top: -42px;">Provenance</div>
+        <div style="max-Width: 80%; font-size: 0.7em; margin: 0px auto; text-align: left;">
+          Example process step documentation for GDAL/OGR transformations and load followed by SQL transformations in PostGIS.  
+        </div>
+        <div style="width: 100%; max-width: 100%; height: 516px; max-height: 516px;">
+          <pre style="width: 75%; max-width: 90%; height: 490px; max-height: 490px; padding: 13px; font-size: 0.23em; overflow-x: scroll; overflow-y: scroll;">
+#########
+# Step 1 - bash script (pseudo code)
+####
+
+# create directory structure and move into it
+mkdir -p /data/svi2020_florida_tract/{download,etl} && cd /data/svi2020_florida_tract
+
+# set update flag based on last update and update frequency
+do_update=0 if date() < last_update + update_frequency else do_update = 1
+
+# download if update flag is set:
+if do_update == 1 then
+  <span style="background-color: #ffd">wget</span> -O download/svi2020_florida_tract.zip 'https://svi.cdc.gov/Documents/Data/2020/db/states/Florida.zip'
+
+# unzip to download directory if update flag is set
+if do_update == 1 then
+  <span style="background-color: #ffd">unzip</span> -d download download/svi2020_florida_tract.zip && rm download/svi2020_florida_tract.zip
+
+# load into postGIS with:
+<span style="background-color: #ffd">  ogr2ogr -lco GEOMETRY_NAME=geom -f PostgreSQL PG:"postgres connection" 
+          download/SVI2020_FLORIDA_tract.gdb -nlt multipolygon -nln svi2020_florida_tract</span>
+
+----------
+-- Step 2 - SQL script (pseudo code):
+----
+
+-- remove duplicate points from geometries:
+UPDATE svi2020_florida_tract
+  SET geom=ST_RemoveRepeatedPoints(geom);
+
+-- add local geometry column and reproject existing geometries into local EPSG:
+SELECT AddGeometryColumn (
+  'svi2020_florida_tract',
+  'geom_local',2236,'multipolygon',2
+);
+UPDATE svi2020_florida_tract
+  <span style="background-color: #ffd">SET geom_local=ST_Transform(geom,2236);</span>
+
+-- index the local geometries and notify API endpoints of a change
+<span style="background-color: #ffd">CREATE INDEX</span> svi2020_florida_tract_geom_local_idx
+  ON svi2020_florida_tract
+  USING GIST (geom_local);
+NOTIFY pgrst, 'reload schema';</pre>
+        </div>
+      </section>
+
+      <section data-autoslide="15000" data-transition="fade" data-transition-speed="slow">
+        <div class="um-template-title" width="100%" style="margin-top: -42px;">Metadata</div>
+        <div style="max-Width: 80%; font-size: 0.7em; margin: 0px auto; text-align: left;">
+          GDSC metadata draws on DataCite (v4), DublinCore, and the (geo) DCAT (v2) standards. Additional fields are needed for attribute, cartographic, and GDSC back-end metadata.
+        </div>
+        <div style="width: 100%; max-width: 100%; height: 516px; max-height: 516px;">
+          <pre style="width: 85%; max-width: 90%; height: 490px; max-height: 490px; padding: 13px; font-size: 0.30em; overflow-x: scroll; overflow-y: scroll;">
+{
+  "dct:title": "2020 Florida CDC Social Vulnerability Index (tracts)",
+  "dct:creator": ["Center for Disease Control"],
+  "dct:identifier": "https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html",
+  "dct:publisher": ["CDC"],
+  "dct:rights": "Public Domain",
+  "dct:coverage": ["Florida"],
+  "dct:relation": ["tl_2020_12_tract"],
+  "dct:type": "Vector Dataset",
+  "dct:issued": "2022-12-22T00:00:00Z",
+  "dct:description": "Social vulnerability refers to the potential negative effects on communities caused by external stresses on human health. Such stresses include natural or human-caused disasters, or disease outbreaks. Reducing social vulnerability can decrease both human suffering and economic loss.\n\nThe CDC/ATSDR Social Vulnerability Index (CDC/ATSDR SVI) uses 16 U.S. census variables to help local officials identify communities that may need support before, during, or after disasters.",
+  "prov:qualifiedAttribution": " direct from source",
+  "dcat:keyword": ["Florida", "CDC", "Vulnerability", "Social Vulnerability Index", "Census Tracts", "Public-Safety"],
+  "dct:language": "en",
+  "adms:representationTechnique": "vector",
+  "locn:geometry": "multipolygon",
+  "dct:conformsTo": 4326,
+  <span style="background-color: #ffd">"prov:action": "#########\n# GDSC ETL is performed in two steps: shell script to ETL data into PostGIS\n# and then additional transformations with SQL in postGIS (if needed).\n####\n\n#########\n# Step 1 - bash script (pseudo code)\n####\n\n# create directory structure and move into it\nmkdir -p /data/svi2020_florida_tract/{download,etl} && cd /data/svi2020_florida_tract\n\n# set update flag based on last update and update frequency\ndo_update=0 if date() < last_update + update_frequency else do_update = 1\n\n# download if update flag is set:\nif do_update == 1 then\n  wget -O download/svi2020_florida_tract.zip 'https://svi.cdc.gov/Documents/Data/2020/db/states/Florida.zip'\n\n# unzip to download directory if update flag is set\nif do_update == 1 then\n  unzip -d download download/svi2020_florida_tract.zip && rm download/svi2020_florida_tract.zip\n\n# load into postGIS with:\n  ogr2ogr -lco GEOMETRY_NAME=geom -f PostgreSQL PG:\"<postgres connection>\" download/SVI2020_FLORIDA_tract.gdb -nlt multipolygon -nln svi2020_florida_tract\n\n#########\n# Step 2 - SQL script (pseudo code):\n####\n\n# remove duplicate points from geometries:\nUPDATE svi2020_florida_tract\n  SET geom=ST_RemoveRepeatedPoints(geom);\"\n\n# add local geometry column and reproject existing geometries into local EPSG:\nSELECT AddGeometryColumn (\n  'svi2020_florida_tract',\n  'geom_local',2236,'multipolygon',2\n);\nUPDATE svi2020_florida_tract\n  SET geom_local=ST_Transform(geom,2236);\nCREATE INDEX svi2020_florida_tract_geom_local_idx\n  ON svi2020_florida_tract\n  USING GIST (geom_local);\nNOTIFY pgrst, 'reload schema';\""</span>,
+  "prov:wasGeneratedBy": "GDSC automation (see Process Step)",
+  "dcat:contactPoint": ["Timothy Norris", "Librarian Associate Professor", "University of Miami Libraries, Frost Institute for Data Science and Computing", "txn60@miami.edu"],
+  "gdsc:label": "location",
+  "gdsc:value": ["spl_theme1", "spl_theme2", "spl_theme3", "spl_theme4", "spl_themes"],
+  <span style="background-color: #ffd">"gdsc:attributes": ["area_sqmi;Tract area in square miles;ALAND * 3.86102e-7;float8;square miles", "county;County name;NAME;varchar;;", "e_afam;Adjunct variable - Black/African American, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0078E;int4;persons", "e_age17;Persons aged 17 and younger estimate, 2016-2020 ACS;B09001_001E;int4;persons", "e_age65;Persons aged 65 and older estimate, 2016-2020 ACS;S0101_C01_030E;int4;persons", "e_aian;Adjunct variable - American Indian or Alaska Native, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0079E;int4;persons", "e_asian;Adjunct variable - Asian, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0080E;int4;persons", "e_crowd;At household level (occupied housing units), more people than rooms estimate, 2016-2020 ACS;DP04_0078E + DP04_0079E;int4;housing units", "e_daypop;Adjunct variable - Estimated daytime population, LandScan 2020;;int4;persons", "e_disabl;Civilian noninstitutionalized population with a disability estimate, 2016-2020 ACS;DP02_0072E;int4;persons", "e_groupq;Persons in group quarters estimate, 2016-2020 ACS;B26001_001E;int4;persons", "e_hburd;Housing cost-burdened occupied housing units with annual income less than 5,000 (30%+ of income spent on housing costs) estimate, 2016-2020 ACS;S2503_C01_028E + S2503_C01_032E + S2503_C01_036E + S2503_C01_040E;int4;housing units", "e_hh;Households estimate, 2016-2020 ACS;DP02_0001E;int4;households", "e_hisp;Adjunct variable - Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0071E;int4;persons", "e_hu;Housing units estimate, 2016-2020 ACS;DP04_0001E;int4;housing units", "e_limeng;Persons (age 5+) who speak English \"less than well\" estimate, 2016-2020 ACS;B16005_007E + B16005_008E + B16005_012E + B16005_013E + B16005_017E + B16005_018E + B16005_022E + B16005_023E + B16005_029E + B16005_030E + B16005_034E + B16005_035E + B16005_039E + B16005_040E + B16005_044E + B16005_045E;int4;persons", "e_minrty;Minority (Hispanic or Latino (of any race) -- Black and African American, Not Hispanic or Latino -- American Indian and Alaska Native, Not Hispanic or Latino -- Asian, Not Hispanic or Latino -- Native Hawaiian and Other Pacific Islander, Not Hispanic or Latino -- Two or More Races, Not Hispanic or Latino -- Other Races, Not Hispanic or Latino) estimate, 2016-2020 ACS;DP05_0071E + DP05_0078E + DP05_0079E + DP05_0080E + DP05_0081E + DP05_0082E + DP05_0083E;int4;persons", "e_mobile;Mobile homes estimate, 2016-2020 ACS;DP04_0014E;int4;mobile homes", "e_munit;Housing in structures with 10 or more units estimate, 2016-2020 ACS;DP04_0012E + DP04_0013E;int4;structures", "e_nhpi;Adjunct variable - Native Hawaiian or Other Pacific Islander, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0081E;int4;persons", "e_nohsdp;Persons (age 25+) with no high school diploma estimate, 2016-2020 ACS;B06009_002E;int4;persons", "e_noint;Adjunct variable - Households without a computer with a broadband Internet subscription estimate, 2016-2020 ACS;S2802_C01_001E - S2802_C02_001E;int4;households", "e_noveh;Households with no vehicle available estimate, 2016-2020 ACS;DP04_0058E;int4;households", "e_otherrace;Adjunct variable - Some other race, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0082E;int4;persons", "e_pov150;Persons below 150% poverty estimate, 2016-2020 ACS;S1701_C01_040E;int4;households", "e_sngpnt;Single-parent household with children under 18 estimate, 2016-2020 ACS;B11012_010E + B11012_015E;int4;persons", "e_totpop;Population estimate, 2016-2020 ACS;S0601_C01_001E;int4;persons", "e_twomore;Adjunct variable - Two or more races, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0083E;int4;persons", "e_unemp;Civilian (age 16+) unemployed estimate, 2016-2020 ACS;DP03_0005E;int4;persons", "e_uninsur;Uninsured in the total civilian noninstitutionalized population estimate, 2016-2020 ACS;S2701_C04_001E;int4;persons", "ep_afam;Adjunct variable - Percentage of Black/African American, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0078PE;float8;percent", "ep_age17;Percentage of persons aged 17 and younger estimate, 2016-2020 ACS;(E_AGE17 / E_TOTPOP) * 100;float8;percent", "ep_age65;Percentage of persons aged 65 and older estimate, 2016-2020 ACS;S0101_C02_030E;float8;percent", "ep_aian;Adjunct variable - Percentage of American Indian or Alaska Native, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0079PE;float8;percent", "ep_asian;Adjunct variable - Percentage of Asian, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0080PE;float8;percent", "ep_crowd;Percentage of occupied housing units with more people than rooms estimate;(E_CROWD / DP04_0002E) * 100;float8;percent", "ep_disabl;Percentage of civilian noninstitutionalized population with a disability estimate, 2016-2020 ACS;DP02_0072PE;float8;percent", "ep_groupq;Percentage of persons in group quarters estimate, 2016-2020 ACS;(E_GROUPQ / E_TOTPOP) * 100;float8;percent", "ep_hburd;Percentage of housing cost-burdened occupied housing units with annual income less than 5,000 (30%+ of income spent on housing costs) estimate, 2016-2020 ACS estimate, 2016-2020 ACS;(E_HBURD / S2503_C01_001E) * 100;float8;percent", "ep_hisp;Adjunct variable - Percentage of Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0071PE;float8;percent", "ep_limeng;Percentage of persons (age 5+) who speak English \"less than well\" estimate, 2016-2020 ACS;(E_LIMENG / B16005_001E) * 100;float8;percent", "ep_minrty;Percentage minority (Hispanic or Latino (of any race) -- Black and African American, Not Hispanic or Latino -- American Indian and Alaska Native, Not Hispanic or Latino -- Asian, Not Hispanic or Latino -- Native Hawaiian and Other Pacific Islander, Not Hispanic or Latino -- Two or More Races, Not Hispanic or Latino -- Other Races, Not Hispanic or Latino) estimate, 2016-2020 ACS;(E_MINRTY / E_TOTPOP) * 100;float8;percent", "ep_mobile;Percentage of mobile homes estimate;DP04_0014PE;float8;percent", "ep_munit;Percentage of housing in structures with 10 or more units estimate;(E_MUNIT / E_HU) * 100;float8;percent", "ep_nhpi;Adjunct variable - Percentage of Native Hawaiian or Other Pacific Islander, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0081PE;float8;percent", "ep_nohsdp;Percentage of persons with no high school diploma (age 25+) estimate;S0601_C01_033E;float8;percent", "ep_noint;Adjunct variable - Percentage of households without a computer with a broadband Internet subscription estimate, 2016-2020 ACS;(E_NOINT / S2802_C01_001E) * 100 ;float8;percent", "ep_noveh;Percentage of households with no vehicle available estimate;DP04_0058PE;float8;percent", "ep_otherrace;Adjunct variable - Percentage of some other race, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0082PE;float8;percent", "ep_pov150;Percentage of persons below 150% poverty estimate;(E_POV150 / S1701_C01_001E) * 100;float8;percent", "ep_sngpnt;Percentage of single-parent households with children under 18 estimate, 2016-2020 ACS;(E_SNGPNT/E_HH) * 100;float8;percent", "ep_twomore;Adjunct variable - Percentage of two or more races, not Hispanic or Latino persons estimate, 2016-2020 ACS;DP05_0083PE;float8;percent", "ep_unemp;Unemployment Rate estimate;DP03_0009PE;float8;percent", "ep_uninsur;Percentage uninsured in the total civilian noninstitutionalized population estimate, 2016-2020 ACS;S2701_C05_001E;float8;percent", "epl_age17;Percentile percentage of persons aged 17 and younger estimate;In Excel: PERCENTRANK.INC on EP_AGE17 array with 4 significant digits;float8;percentile", "epl_age65;Percentile percentage of persons aged 65 and older estimate;In Excel: PERCENTRANK.INC on EP_AGE65 array with 4 significant digits;float8;percentile", "epl_crowd;Percentile percentage households with more people than rooms estimate;In Excel: PERCENTRANK.INC on EP_CROWD array with 4 significant digits;float8;percentile", "epl_disabl;Percentile percentage of civilian noninstitutionalized population with a disability estimate;In Excel: PERCENTRANK.INC on EP_DISABL array with 4 significant digits;float8;percentile", "epl_groupq;Percentile percentage of persons in group quarters estimate;In Excel: PERCENTRANK.INC on EP_GROUPQ array with 4 significant digits;float8;percentile", "epl_hburd;Percentile percentage of housing cost-burdened occupied housing units estimate;In Excel: PERCENTRANK.INC on EP_HBURD array with 4 significant digits;float8;percentile", "epl_limeng;Percentile percentage of persons (age 5+) who speak English \"less than well\" estimate;In Excel: PERCENTRANK.INC on EP_LIMENG array with 4 significant digits;float8;percentile", "epl_minrty;Percentile percentage minority (Hispanic or Latino (of any race) -- Black and African American, Not Hispanic or Latino -- American Indian and Alaska Native, Not Hispanic or Latino -- Asian, Not Hispanic or Latino -- Native Hawaiian and Other Pacific Islander, Not Hispanic or Latino -- Two or More Races, Not Hispanic or Latino -- Other Races, Not Hispanic or Latino) estimate;In Excel: PERCENTRANK.INC on EP_MINRTY array with 4 significant digits;float8;percentile", "epl_mobile;Percentile percentage mobile homes estimate;In Excel: PERCENTRANK.INC on EP_MOBILE array with 4 significant digits;float8;percentile", "epl_munit;Percentile percentage housing in structures with 10 or more units estimate;In Excel: PERCENTRANK.INC on EP_MUNIT array with 4 significant digits;float8;percentile", "epl_nohsdp;Percentile percentage of persons with no high school diploma (age 25+) estimate;In Excel: PERCENTRANK.INC on EP_NOHSDP array with 4 significant digits;float8;percentile", "epl_noveh;Percentile percentage households with no vehicle available estimate;In Excel: PERCENTRANK.INC on EP_NOVEH array with 4 significant digits;float8;percentile", "epl_pov150;Percentile percentage of persons below 150% poverty estimate;In Excel: PERCENTRANK.INC on EP_POV150 array with 4 significant digits;float8;percentile", "epl_sngpnt;Percentile percentage of single-parent households with children under 18 estimate;In Excel: PERCENTRANK.INC on EP_SNGPNT array with 4 significant digits;float8;percentile", "epl_unemp;Percentile percentage of civilian (age 16+) unemployed estimate;In Excel: PERCENTRANK.INC on EP_UNEMP array with 4 significant digits;float8;percentile", "epl_uninsur;Percentile percentage of uninsured estimate;In Excel: PERCENTRANK.INC on EP_UNINSUR array with 4 significant digits;float8;percentile", "f_age17;Flag - the percentage of persons aged 17 and younger is in the 90th percentile (1 = yes, 0 = no) ;EPL_AGE17 >= 0.90;boolean;;", "f_age65;Flag - the percentage of persons aged 65 and older is in the 90th percentile (1 = yes, 0 = no) ;EPL_AGE65 >= 0.90;boolean;;", "f_crowd;Flag - the percentage of crowded households is in the 90th percentile (1 = yes, 0 = no);EPL_CROWD >= 0.90;boolean;;", "f_disabl;Flag - the percentage of persons with a disability is in the 90th percentile (1 = yes, 0 = no) ;EPL_DISABL >= 0.90;boolean;;", "f_groupq;Flag - the percentage of persons in group quarters is in the 90th percentile (1 = yes, 0 = no) ;EPL_GROUPQ >= 0.90;boolean;;", "f_hburd;Flag - the percentage of housing cost-burdened occupied housing units is in the 90th percentile (1 = yes, 0 = no);EPL_HBURD >= 0.90;boolean;;", "f_limeng;Flag - the percentage those with limited English is in the 90th percentile (1 = yes, 0 = no) ;EPL_LIMENG >= 0.90;boolean;;", "f_minrty;Flag - the percentage of minority is in the 90th percentile (1 = yes, 0 = no);EPL_MINRTY >= 0.90;boolean;;", "f_mobile;Flag - the percentage of mobile homes is in the 90th percentile (1 = yes, 0 = no);EPL_MOBILE >= 0.90;boolean;;", "f_munit;Flag - the percentage of households in multi-unit housing is in the 90th percentile (1 = yes, 0 = no);EPL_MUNIT >= 0.90;boolean;;", "f_nohsdp;Flag - the percentage of persons with no high school diploma is in the 90th percentile (1 = yes, 0 = no) ;EPL_NOHSDP >= 0.90;boolean;;", "f_noveh;Flag - the percentage of households with no vehicles is in the 90th percentile (1 = yes, 0 = no) ;EPL_NOVEH >= 0.90;boolean;;", "f_pov150;Flag - the percentage of persons below 150% poverty is in the 90th percentile (1 = yes, 0 = no);EPL_POV150 >= 0.90;boolean;;", "f_sngpnt;Flag - the percentage of single-parent households is in the 90th percentile (1 = yes, 0 = no);EPL_SNGPNT >= 0.90;boolean;;", "f_theme1;Sum of flags for Socioeconomic Status theme;F_POV150 + F_UNEMP + F_HBURD + F_NOHSDP + F_UNINSUR;int4;;", "f_theme2;Sum of flags for Household Characteristics theme;F_AGE65 + F_AGE17 + F_DISABL + F_SNGPNT + F_LIMENG;int4;;", "f_theme3;Sum of flags for Racial and Ethnic Minority Status theme;F_MINRTY;int4;;", "f_theme4;Sum of flags for Housing Type/ Transportation theme;F_MUNIT + F_MOBILE + F_CROWD + F_NOVEH + F_GROUPQ;int4;;", "f_total;Sum of flags for the four themes;F_THEME1 + F_THEME2 + F_THEME3 + F_THEME4;int4;;", "f_unemp;Flag - the percentage of civilian unemployed is in the 90th percentile (1 = yes, 0 = no) ;EPL_UNEMP >= 0.90;boolean;;", "f_uninsur;Flag - the percentage of uninsured is in the 90th percentile (1 = yes, 0 = no) ;EPL_UNINSUR >= 0.90;boolean;;", "fips;Tract-level FIPS code;GEO_ID;varchar;;", "location;Text description of tract, county, state;NAME;varchar;;", "m_afam;Adjunct variable - Black/African American, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0078M;float8;moe", "m_age17;Persons aged 17 and younger estimate MOE, 2016-2020 ACS;B09001_001M;float8;moe", "m_age65;Persons aged 65 and older estimate MOE, 2016-2020 ACS;S0101_C01_030M;float8;moe", "m_aian;Adjunct variable - American Indian or Alaska Native, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0079M;float8;moe", "m_asian;Adjunct variable - Asian, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0080M;float8;moe", "m_crowd;At household level (occupied housing units), more people than rooms estimate MOE, 2016-2020 ACS;SQRT (DP04_0078M ^2 + DP04_0079M ^2);float8;moe", "m_disabl;Civilian noninstitutionalized population with a disability estimate MOE, 2016-2020 ACS;DP02_0072M;float8;moe", "m_groupq;Persons in group quarters estimate MOE, 2016-2020 ACS;B26001_001M;float8;moe", "m_hburd;Housing cost-burdened occupied housing units with annual income less than 5,000 (30%+ of income spent on housing costs) estimate MOE, 2016-2020 ACS;SQRT (S2503_C01_028M ^2 + S2503_C01_032M ^2 + S2503_C01_036M ^2 + S2503_C01_040M ^2) ;float8;moe", "m_hh;Households estimate MOE, 2016-2020 ACS;DP02_0001M;float8;moe", "m_hisp;Adjunct variable - Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0071M;float8;moe", "m_hu;Housing units estimate MOE, 2016-2020 ACS;DP04_0001M;float8;moe", "m_limeng;Persons (age 5+) who speak English \"less than well\" estimate MOE, 2016-2020 ACS;SQRT (B16005_007M ^2 + B16005_008M ^2 + B16005_012M ^2 + B16005_013M ^2 + B16005_017M ^2 + B16005_018M ^2 + B16005_022M ^2 + B16005_023M ^2 + B16005_029M ^2 + B16005_030M ^2 + B16005_034M ^2 + B16005_035M ^2 + B16005_039M ^2 + B16005_040M ^2 + B16005_044M ^2 + B16005_045M ^2);float8;moe", "m_minrty;Minority (Hispanic or Latino (of any race) -- Black and African American, Not Hispanic or Latino -- American Indian and Alaska Native, Not Hispanic or Latino -- Asian, Not Hispanic or Latino -- Native Hawaiian and Other Pacific Islander, Not Hispanic or Latino -- Two or More Races, Not Hispanic or Latino -- Other Races, Not Hispanic or Latino) estimate MOE, 2016-2020 ACS;SQRT (DP05_0071M ^2 + DP05_0078M ^2 + DP05_0079M ^2 + DP05_0080M ^2 + DP05_0081M ^2 + DP05_0082M ^2 + DP05_0083M ^2) ;float8;moe", "m_mobile;Mobile homes estimate MOE, 2016-2020 ACS;DP04_0014M;float8;moe", "m_munit;Housing in structures with 10 or more units estimate MOE, 2016-2020 ACS;SQRT (DP04_0012M ^2 + DP04_0013M ^2) ;float8;moe", "m_nhpi;Adjunct variable - Native Hawaiian or Other Pacific Islander, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0081M;float8;moe", "m_nohsdp;Persons (age 25+) with no high school diploma estimate MOE, 2016-2020 ACS;B06009_002M;float8;moe", "m_noint;Adjunct variable - Households without a computer with a broadband Internet subscription estimate MOE, 2016-2020 ACS;SQRT (S2802_C01_001M ^2 - S2802_C02_001M ^2);float8;moe", "m_noveh;Households with no vehicle available estimate MOE, 2016-2020 ACS;DP04_0058M;float8;moe", "m_otherrace;Adjunct variable - Some other race, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0082M;float8;moe", "m_pov150;Persons below 150% poverty estimate MOE, 2016-2020 ACS;S1701_C01_040M;float8;moe", "m_sngpnt;Single-parent household with children under 18 estimate MOE, 2016-2020 ACS;SQRT (B11012_010M ^2 + B11012_015M ^2) ;float8;moe", "m_totpop;Population estimate MOE, 2016-2020 ACS;S0601_C01_001M;float8;moe", "m_twomore;Adjunct variable - Two or more races, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0083M;float8;moe", "m_unemp;Civilian (age 16+) unemployed estimate MOE, 2016-2020 ACS;DP03_0005M;float8;moe", "m_uninsur;Uninsured in the total civilian noninstitutionalized population estimate MOE, 2016-2020 ACS;S2701_C04_001M;float8;moe", "mp_afam;Adjunct variable - Percentage of Black/African American, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0078PM;float8;moe", "mp_age17;Percentage of persons aged 17 and younger estimate MOE, 2016-2020 ACS;((SQRT (M_AGE17^2 - ((EP_AGE17 / 100)^2 * M_TOTPOP^2))) / E_TOTPOP) * 100;float8;moe", "mp_age65;Percentage of persons aged 65 and older estimate MOE, 2016-2020 ACS;S0101_C02_030M;float8;moe", "mp_aian;Adjunct variable - Percentage of American Indian or Alaska Native, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0079PM;float8;moe", "mp_asian;Adjunct variable - Percentage of Asian, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0080PM;float8;moe", "mp_crowd;Percentage of occupied housing units with more people than rooms estimate MOE;((SQRT (M_CROWD^2 - ((EP_CROWD / 100)^2 * DP04_0002M ^2))) / DP04_0002E) * 100;float8;moe", "mp_disabl;Percentage of civilian noninstitutionalized population with a disability estimate MOE, 2016-2020 ACS;DP02_0072PM;float8;moe", "mp_groupq;Percentage of persons in group quarters estimate MOE, 2016-2020 ACS;((SQRT (M_GROUPQ^2 - ((EP_GROUPQ / 100)^2 * M_TOTPOP^2))) / E_TOTPOP) * 100;float8;moe", "mp_hburd;Percentage of housing cost-burdened occupied housing units with annual income less than 5,000 (30%+ of income spent on housing costs) estimate MOE, 2016-2020 ACS;((SQRT (M_HBURD^2 - ((EP_HBURD / 100)^2 * S2503_C01_001M ^2))) / S2503_C01_001E) * 100;float8;moe", "mp_hisp;Adjunct variable - Percentage of Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0071PM;float8;moe", "mp_limeng;Percentage of persons (age 5+) who speak English \"less than well\" estimate MOE, 2016-2020 ACS;((SQRT (M_LIMENG^2 - ((EP_LIMENG / 100)^2 * B16005_001M ^2))) / B16005_001E) * 100;float8;moe", "mp_minrty;Percentage minority (Hispanic or Latino (of any race) -- Black and African American, Not Hispanic or Latino -- American Indian and Alaska Native, Not Hispanic or Latino -- Asian, Not Hispanic or Latino -- Native Hawaiian and Other Pacific Islander, Not Hispanic or Latino -- Two or More Races, Not Hispanic or Latino -- Other Races, Not Hispanic or Latino) estimate MOE, 2016-2020 ACS;((SQRT (M_MINRTY^2 - ((EP_MINRTY / 100)^2 * M_TOTPOP^2))) / E_TOTPOP) * 100;float8;moe", "mp_mobile;Percentage of mobile homes estimate MOE;DP04_0014PM;float8;moe", "mp_munit;Percentage of housing in structures with 10 or more units estimate MOE;((SQRT (M_MUNIT^2 - ((EP_MUNIT / 100)^2 * M_HU^2))) / E_HU) * 100;float8;moe", "mp_nhpi;Adjunct variable - Percentage of Native Hawaiian or Other Pacific Islander, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0081PM;float8;moe", "mp_nohsdp;Percentage of persons with no high school diploma (25+) estimate MOE;S0601_C01_033M;float8;moe", "mp_noint;Adjunct variable - Percentage of households without a computer with a broadband Internet subscription estimate MOE, 2016-2020 ACS;((SQRT (M_NOINT^2 - ((EP_NOINT / 100)^2 * S2802_C01_001M^2))) / S2802_C01_001M) * 100;float8;moe", "mp_noveh;Percentage of households with no vehicle available estimate MOE;DP04_0058PM;float8;moe", "mp_otherrace;Adjunct variable - Percentage of some other race, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0082PM;float8;moe", "mp_pov150;Percentage of persons below 150% poverty estimate MOE;((SQRT(M_POV150^2-((EP_POV150 / 100)^2 * S1701_C01_001M ^2))) / S1701_C01_001E) * 100;float8;moe", "mp_sngpnt;Percentage of single-parent households with children under 18 estimate MOE, 2016-2020 ACS;((SQRT (M_SNGPNT^2 - ((EP_SNGPNT / 100)^2 * M_HH^2))) / E_HH) * 100;float8;moe", "mp_twomore;Adjunct variable - Percentage of two or more races, not Hispanic or Latino persons estimate MOE, 2016-2020 ACS;DP05_0083PM;float8;moe", "mp_unemp;Unemployment Rate estimate MOE;DP03_0009PM;float8;moe", "mp_uninsur;Percentage uninsured in the total civilian noninstitutionalized population estimate MOE, 2016-2020 ACS;S2701_C05_001M;float8;moe", "rpl_theme1;Percentile ranking for Socioeconomic Status theme summary;In Excel: PERCENTRANK.INC on SPL_THEME1 array with 4 significant digits;float8;moe", "rpl_theme2;Percentile ranking for Household Characteristics theme summary;In Excel: PERCENTRANK.INC on SPL_THEME2 array with 4 significant digits;float8;percentile", "rpl_theme3;Percentile ranking for Racial and Ethnic Minority Status theme;In Excel: PERCENTRANK.INC on SPL_THEME3 array with 4 significant digits;float8;percentile", "rpl_theme4;Percentile ranking for Housing Type/ Transportation theme;In Excel: PERCENTRANK.INC on SPL_THEME4 array with 4 significant digits;float8;percentile", "rpl_themes;Overall percentile ranking;In Excel: PERCENTRANK.INC on SPL_THEMES array with 4 significant digits;float8;percentile", "spl_theme1;Sum of series for Socioeconomic Status theme;EPL_POV150 + EPL_UNEMP + EPL_HBURD + EPL_NOHSDP + EPL_UNINSUR;float8;svi index", "spl_theme2;Sum of series for Household Characteristics theme;EPL_AGE65 + EPL_AGE17 + EPL_DISABL + EPL_SNGPNT + EPL_LIMENG;float8;svi index", "spl_theme3;Sum of series for Racial and Ethnic Minority Status theme;EPL_MINRTY;float8;svi index", "spl_theme4;Sum of series for Housing Type/ Transportation theme;EPL_MUNIT + EPL_MOBIL + EPL_CROWD + EPL_NOVEH + EPL_GROUPQ;float8;svi index", "spl_themes;Sum of series themes;SPL_THEME1 + SPL_THEME2 + SPL_THEME3 + SPL_THEME4;float8;svi index", "st;State-level FIPS code;FIPS;varchar;;", "st_abbr;State abbreviation;N/A Joined from Esri state boundary shapefile;varchar;;", "state;State name;NAME;varchar;;", "stcnty;County-level FIPS code;FIPS;varchar;;"]</span>,
+  "gdsc:collections": ["Health Outcomes"],
+  "gdsc:functions": ["gdsc_get_attributes"],
+  "gdsc:analyticConformsTo": 2236,
+  "gdsc:sponsor": ["IDSC;https://idsc.miami.edu", "Library;https://www.library.miami.edu"],
+  "dcat:downloadURL": "https://svi.cdc.gov/Documents/Data/2020/db/states/Florida.zip",
+  "gdsc:tablename": "svi2020_florida_tract",
+  "gdsc:up": "false",
+  "gdsc:podID": "postgis-ky06qy8z0zpestbu",
+  "dct:modified": "2023-09-18 23:02:26",
+  "dct:accrualPeriodicity": "Never"
+}</pre>
+        </div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch23.jpg" style="max-width: 80%;"></div>
+      </section>
+
+      <section data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch34.jpg" style="max-width: 80%;"></div>
+      </section> -->
+
+      <section data-autoslide="23000" data-transition="fade" data-transition-speed="slow">
+        <div style="margin: 0px auto;"><img src="common/assets/img/gdscarch45.jpg" style="max-width: 80%;"></div>
+        <div style="position: absolute; top: 110px; left: 130px;"><a style="color: #99f; font-size: 0.6em" href="https://portal.gdsc.miami.edu">https://portal.gdsc.miami.edu</a></div>
+        <div style="position: absolute; top: -40px; left: 570px;"><a style="color: #99f; font-size: 0.6em" href="https://gdsc.idsc.miami.edu">https://gdsc.idsc.miami.edu</a></div>
+        <div style="position: absolute; bottom: -120px; left: 280px; max-width: 980px; overflow-wrap: break-word; text-align: left; font-size: 0.6em;"><a style="color: #99f;" href="https://gdsc.idsc.miami.edu/functions/mdc_property_point_view?select=true_mailing_addr1,true_mailing_city,true_mailing_zip_code,folio,x_coord,y_coord&true_mailing_addr1=like.*5835*&limit=10">https://gdsc.idsc.miami.edu/functions/mdc_property_point_view?<br>select=true_mailing_addr1,true_mailing_city,true_mailing_zip_code,folio,x_coord,y_coord&true_mailing_addr1=like.*5835*&limit=10</a></div>
+        <div style="position: absolute; top: -23px; left: 230px;"><img src="common/assets/img/portal.png" style="max-width: 120px; max-height: 120px;"></div>
+        <div style="position: absolute; top: -70px; left: 880px;"><img src="common/assets/img/GDSC_QRCode.png" style="max-width: 120px; max-height: 120px;"></div>
+        <div style="position: absolute; bottom: -150px; left: 150px; overflow-wrap: break-word; line-height: 0.34em; text-align: left;"><img src="common/assets/img/addressquery.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section>
+
+      <section data-autoslide="3000" data-transition="fade" data-transition-speed="slow">
+        <div style="text-align: left !important; margin: 0px auto;">
+          <div class="um-template-title">Flexibility and Scaleability</div>
+        </div>
+        <img class="fragment" data-fragment-index="2" style="max-height: 180px; position: absolute; top: 90px; left: 70px;" src="common/assets/img/gdscfederate3.jpg">
+        <img class="fragment" data-fragment-index="2" style="max-height: 230px;  position: absolute; top: 125px; left: 220px;" src="common/assets/img/gdscfederate2.jpg">
+        <div class="fragment" data-fragment-index="2" style="position: absolute; top: 450px; left: 50px; font-size: 0.8em; text-align: left;">
+          Federated collections<br><span style="font-size: 0.8em"><em>serving other institutional<br>or regional needs</em></span>
+        </div>
+        <img class="fragment" data-fragment-index="2"  style="max-height: 300px; position: absolute; top: 160px; left: 420px;" src="common/assets/img/gdscfederate1.jpg">
+        <img style="max-height: 400px; position: absolute; top: 180px; left: 670px;" src="common/assets/img/gdscscale.jpg">
+        <div class="fragment" data-fragment-index="1" style="position: absolute; top: 420px; right: 20px; font-size: 0.8em; text-align: right;">
+          Decoupled components<br>
+          <span style="font-size: 0.8em"><em>application specific requirements</em></span>
+        </div>
+        <img class="fragment" data-fragment-index="1" style="max-height: 190px; position: absolute; top: 160px; left: 990px;" src="common/assets/img/gdscdecouple1.jpg">
+        <img class="fragment" data-fragment-index="1" style="max-height: 150px;  position: absolute; top: 125px; left: 1130px;" src="common/assets/img/gdscdecouple3.jpg">
+        <img class="fragment" data-fragment-index="1" style="max-height: 120px;  position: absolute; top: 90px; left: 1240px;" src="common/assets/img/gdscdecouple3.jpg">
+      </section>
+
+      <!-- <section data-autoslide="12000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/DVMT1.jpg" data-background-size="contain">
+        <div style="position:absolute; width: 380px; top: 60px; right: 0px; font-size: 0.55em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
+          <h2>DVMT Collection</h2>
+          The collection for the Displacement Vulnerability Mitigation Tool (DVMT) is the first complete prototype collection available in GDSC.<br><br>This collection powers the DMVT as an dynamic web application for developers to better understand how their projects impact vulnerable populations in Miami-Dade County.<br><br>The user first specifies an address and basic project characteristics.
+        </div>
+        <div style="position: absolute; top: -110px; right: 140px;"><img src="common/assets/img/DVMT_QR.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/DVMT2.jpg" data-background-size="contain">
+        <div style="position:absolute; width: 380px; top: 60px; right: 0px; font-size: 0.55em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
+          <h2>DVMT Collection</h2>
+          The DMVT web application then requests data for the specified project location from layers in the GDSC collection.<br><br>This section draws on aggregate demographic variables from the Census Bureau's American Community Survey 5-year estimates.
+        </div>
+        <div style="position: absolute; top: -170px; right: 140px;"><img src="common/assets/img/DVMT_QR.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section>
+
+      <section data-autoslide="10000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/DVMT3.jpg" data-background-size="contain">
+        <div style="position:absolute; width: 380px; top: 60px; right: 0px; font-size: 0.55em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
+          <h2>DVMT Collection</h2>
+          Data is drawn from the collection that further characterizes the displacement vulnerability for the development site.<br><br>Layers in the collection include surface temperature, public services (schools, hospitals, fire stations, health centers, police, libraries), transportation (bus stops and metro stations), known sexual offenders, HOLC redlining grades, and pollution sites (superfund and brownfield locations), among others.
+        </div>
+        <div style="position: absolute; top: -110px; right: 140px;"><img src="common/assets/img/DVMT_QR.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section>
+
+      <section data-autoslide="13000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/DVMT4.jpg" data-background-size="contain">
+        <div style="position:absolute; width: 380px; top: 60px; right: 0px; font-size: 0.55em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
+          <h2>DVMT Collection</h2>
+          The DVMT then calculates a susceptibility index to characterize the displacement vulnerability for the project location, and if the index is above several defined thresholds, varying mitigation efforts are suggested as part of the development project.<br><br>What would have taken a skilled GIS technician several hours can now be completed by a developer with no GIS skills in a few minutes, and then repeated across numerous development locations.
+        </div>
+        <div style="position: absolute; top: -110px; right: 140px;"><img src="common/assets/img/DVMT_QR.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section>
+
+      <section data-autoslide="13000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/ohdsi_gis.png" data-background-size="contain">
+        <div style="position:absolute; width: 300px; top: 50px; right: 0px; font-size: 0.55em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
+          <h2>OHDSI GIS Collection</h2>
+          A special collection for health disparities research with attribute level ETL for datasets in the collection. Used to model social and environmental drivers of health outcomes as an integration with the OHDSI common data model and suite of tools for analyzing EHR data. 
+        </div>
+        <div style="position: absolute; top: -120px; right: 80px;"><img src="common/assets/img/OHDSI_GIS_github_QR.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section>
+
+      <section data-autoslide="13000" data-transition="fade" data-transition-speed="slow" data-background-image="common/assets/img/ohdsi_gis.png" data-background-size="contain">
+        <div style="position:absolute; width: 300px; top: 50px; right: 0px; font-size: 0.55em; text-align: right; background-color: #eed; padding: 23px; border-radius: 13px;">
+          <h2>OHDSI GIS Collection</h2>
+          Researchers can choose specific variables from the special collections and then bring those variables into the OHDSI specific representation for GIS data and use the existing analytic tool set to answer research questions. 
+        </div>
+        <div style="position: absolute; top: -150px; right: 80px;"><img src="common/assets/img/OHDSI_GIS_github_QR.png" style="max-width: 120px; max-height: 120px;"></div>
+      </section> -->
+
+      <!-- ***
+            * Back on Track (outline)
+            * -->
+      <!-- <section data-autoslide="10000" data-transition="fade" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">What is Data Science<br>&nbsp;&nbsp;&<br>&nbsp;&nbsp;&nbsp;What is a Data Scientist?</div>
+          <div style="margin-bottom: 200px; font-size: 90%; margin-left: 23px;">
+            <ul>
+                <li style="color: #aaa;"><i>Beginnings</i></li>
+                <li style="color: #aaa;"><i>Data Curation</i></li>
+                <li style="color: #aaa;"><i>A Few Examples</i></b></li>
+                <li><b><i>A Political Economy of Data</i></b></li>
+                <li style="color: #aaa;"><i>Some Time for Questions and Discussion</i></li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ***
+            *  Thanks
+            * -->
+      <section data-autoslide="10000" data-background-image="common/assets/img/WhereAreWeGoingIDSC.jpg">
+        <div style="margin-left: 70px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">Thanks!</div>
+          <div style="margin-bottom: 100px; font-size: 90%">
+            Timothy B Norris<br>
+            <a href="mailto:tnorris@miami.edu" style="color: black !important;">tnorris@miami.edu</a>
+          </div>
+          <div style="margin-bottom: 200px; width: 350px; font-size: 90%">
+            Coda: data curation is a human activity. There is no way to express gratitude to all of the people who have supported this work - you know who you are.
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="common/java/reveal.js"></script>
+	<script src="common/java/notes.js"></script>
+  <script src="common/java/head.min.js"></script>
+  <script>
+    Reveal.initialize({
+        width: 1366, height: 768, margin: 0.05,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        mouseWheel: false,
+        autoSlide: 10000,
+        loop: true,
+        chart: {
+          defaults: { 
+            global: { 
+              defaultFontSize: 20,
+              title: { fontColor: "#333" }, 
+              legend: {
+                position: "top",
+                labels: { fontColor: "#333" },
+              },
+              tooltips: {
+                labels: { fontColor: "#333" },
+              },
+            }, 
+            scale: { 
+              scaleLabel: { fontColor: "#333" }, 
+              gridLines: { color: "#333", zeroLineColor: "#333" }, 
+              ticks: { fontColor: "#333" }, 
+            } 
+          },
+        },
+        dependencies: [
+            { src: 'common/java/Chart.min.js' },
+            { src: 'common/java/csv2chart.js' }
+        ] 
+    });
+  </script>
+</body>
+</html>
